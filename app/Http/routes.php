@@ -11,7 +11,8 @@
 |
 */
 Route::group(['middleware'=>'sign'], function(){
-	Route::get('/home', 'HomeController@index');
+	Route::get('gateway', 'GatewayController@index');
+	Route::post('gateway', 'GatewayController@index');
 });
 
 Route::get('/', function () {

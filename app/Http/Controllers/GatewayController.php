@@ -3,8 +3,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Routing\Controller;
 use Illuminate\Http\Request;
-use App\Tools\ResponseTool;
-use Illuminate\Http\Exception\HttpResponseException;
+use Core\Exceptions\ParamException;
 
 class GatewayController extends Controller{
 	public function index(Request $request){
@@ -16,7 +15,7 @@ class GatewayController extends Controller{
 		$interfaceObject = new $className();
 		$actionName = $this->getAction($interface);
 		
-		$httpRequest = 'App\Http\Requests\\'.$actionName.'Request';
+		$httpRequest = 'App\Http\Requests\\'.$this->getInterfaceName($interface).$actionName.'Request';
 		
 		if(class_exists($httpRequest)){
 			$request = $httpRequest::createFromGlobals();
@@ -27,7 +26,7 @@ class GatewayController extends Controller{
 		}
 		
 		if(!method_exists($interfaceObject, $actionName)){
-			throw new \ErrorException('接口不存在');
+			throw new ParamException('接口不存在');
 		}
 		
 		$interfaceObject->request = $request;
@@ -36,14 +35,14 @@ class GatewayController extends Controller{
 	protected function getInterfaceName($string){
 		$arr = $this->interfaceStrToArr($string);
 		if(!isset($arr[0])){
-			throw new \ErrorException('接口参数错误');
+			throw new ParamException('接口参数错误');
 		}
 		return ucwords($arr[0]);
 	}
 	protected function getAction($string){
 		$arr = $this->interfaceStrToArr($string);
 		if(!isset($arr[0])){
-			throw new \ErrorException('接口参数错误');
+			throw new ParamException('接口参数错误');
 		}
 		$action = array_pop($arr);
 		return ucwords($action);
