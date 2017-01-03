@@ -31,6 +31,10 @@ class ComposerStaticInita0f747fa023fb23b0b9bb5f069dab06d
         array (
             'Webmozart\\Assert\\' => 17,
         ),
+        'T' => 
+        array (
+            'Tests\\' => 6,
+        ),
         'S' => 
         array (
             'Symfony\\Polyfill\\Util\\' => 22,
@@ -104,6 +108,10 @@ class ComposerStaticInita0f747fa023fb23b0b9bb5f069dab06d
         'Webmozart\\Assert\\' => 
         array (
             0 => __DIR__ . '/..' . '/webmozart/assert/src',
+        ),
+        'Tests\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/tests',
         ),
         'Symfony\\Polyfill\\Util\\' => 
         array (
@@ -274,8 +282,7 @@ class ComposerStaticInita0f747fa023fb23b0b9bb5f069dab06d
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Events\\Event' => __DIR__ . '/../..' . '/app/Events/Event.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
-        'App\\Http\\Controllers\\Auth\\AuthController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/AuthController.php',
-        'App\\Http\\Controllers\\Auth\\PasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/PasswordController.php',
+        'App\\Exceptions\\TestException' => __DIR__ . '/../..' . '/app/Exceptions/TestException.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
@@ -285,10 +292,13 @@ class ComposerStaticInita0f747fa023fb23b0b9bb5f069dab06d
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
         'App\\Http\\Requests\\Request' => __DIR__ . '/../..' . '/app/Http/Requests/Request.php',
         'App\\Jobs\\Job' => __DIR__ . '/../..' . '/app/Jobs/Job.php',
+        'App\\Model\\CommonModel' => __DIR__ . '/../..' . '/app/Models/CommonModel.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
         'App\\Providers\\EventServiceProvider' => __DIR__ . '/../..' . '/app/Providers/EventServiceProvider.php',
         'App\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/app/Providers/RouteServiceProvider.php',
+        'App\\Tools\\HttpClient' => __DIR__ . '/../..' . '/app/Tools/HttpClient.php',
+        'App\\Tools\\ResponseTool' => __DIR__ . '/../..' . '/app/Tools/ResponseTool.php',
         'App\\User' => __DIR__ . '/../..' . '/app/User.php',
         'Carbon\\Carbon' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Carbon.php',
         'Carbon\\CarbonInterval' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/CarbonInterval.php',
@@ -307,10 +317,14 @@ class ComposerStaticInita0f747fa023fb23b0b9bb5f069dab06d
         'ClassPreloader\\Parser\\FileVisitor' => __DIR__ . '/..' . '/classpreloader/classpreloader/src/Parser/FileVisitor.php',
         'ClassPreloader\\Parser\\NodeTraverser' => __DIR__ . '/..' . '/classpreloader/classpreloader/src/Parser/NodeTraverser.php',
         'ClassPreloader\\Parser\\StrictTypesVisitor' => __DIR__ . '/..' . '/classpreloader/classpreloader/src/Parser/StrictTypesVisitor.php',
+        'Core\\Application' => __DIR__ . '/../..' . '/core/Application.php',
         'Core\\Exceptions\\Handler' => __DIR__ . '/../..' . '/core/Exceptions/Handler.php',
         'Core\\Exceptions\\NoticeException' => __DIR__ . '/../..' . '/core/Exceptions/NoticeException.php',
         'Core\\Exceptions\\ParamException' => __DIR__ . '/../..' . '/core/Exceptions/ParamException.php',
         'Core\\Exceptions\\SystemException' => __DIR__ . '/../..' . '/core/Exceptions/SystemException.php',
+        'Core\\Middleware\\Sign' => __DIR__ . '/../..' . '/core/Middleware/Sign.php',
+        'Core\\Router' => __DIR__ . '/../..' . '/core/Router.php',
+        'Core\\RoutingServiceProvider' => __DIR__ . '/../..' . '/core/RoutingServiceProvider.php',
         'CreatePasswordResetsTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
         'CreateUsersTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_000000_create_users_table.php',
         'Cron\\AbstractField' => __DIR__ . '/..' . '/mtdowling/cron-expression/src/Cron/AbstractField.php',

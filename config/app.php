@@ -1,7 +1,7 @@
 <?php
 
 return [
-	'app_name'=>'fiance',
+	'app_name'=>'common',
     /*
     |--------------------------------------------------------------------------
     | Application Environment
