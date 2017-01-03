@@ -111,6 +111,7 @@ return [
 
     'log' => env('APP_LOG', 'single'),
 
+	'log_level' =>'debug',
     /*
     |--------------------------------------------------------------------------
     | Autoloaded Service Providers
