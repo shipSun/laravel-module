@@ -1,5 +1,5 @@
 <?php
-
+$mysql = include 'database-mysql.php';
 return [
 
     /*
@@ -26,7 +26,7 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'mysql'),
+    'default' => 'mysql',
 
     /*
     |--------------------------------------------------------------------------
@@ -52,20 +52,19 @@ return [
             'prefix' => '',
         ],
 
-        'mysql' => [
+       'mysql' => [
             'driver' => 'mysql',
-            'host' => env('DB_HOST', 'localhost'),
-            'port' => env('DB_PORT', '3306'),
-            'database' => env('DB_DATABASE', 'forge'),
-            'username' => env('DB_USERNAME', 'forge'),
-            'password' => env('DB_PASSWORD', ''),
+            'host' => $mysql['host'],
+            'port' => $mysql['port'],
+            'database' => $mysql['database_name'],
+            'username' => $mysql['user_name'],
+            'password' => $mysql['password'],
             'charset' => 'utf8',
             'collation' => 'utf8_unicode_ci',
             'prefix' => '',
             'strict' => false,
             'engine' => null,
         ],
-
         'pgsql' => [
             'driver' => 'pgsql',
             'host' => env('DB_HOST', 'localhost'),

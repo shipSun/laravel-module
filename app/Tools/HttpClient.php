@@ -26,19 +26,19 @@ class HttpClient{
 	}
 	public function get($url, $data){
 		if($this->encrypt){
-			$data = array_merge($data, $this->sign($this->appID, $this->signType, $signData));
+			$data = array_merge($data, $this->sign($this->appID, $this->signType, $data));
 		}
 		$url.= '?'.http_build_query($data);
 		return $this->excute($url, [], 'get');
 	}
 	public function post($url, $data){
 		if($this->encrypt){
-			$data = array_merge($data, $this->sign($this->appID, $this->signType, $signData));
+			$data = array_merge($data, $this->sign($this->appID, $this->signType, $data));
 		}
 		return $this->excute($url, $data, 'post');
 	}
 	protected function sign($appID, $signType, $signData){
-		$signData['product_app_id'] = $appIDD;
+		$signData['product_app_id'] = $appID;
 		$signData['product_sign_type'] = $signType;
 		unset($signData['interface']);
 		

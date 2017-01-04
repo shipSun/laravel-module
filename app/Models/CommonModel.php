@@ -49,13 +49,13 @@ class CommonModel extends HttpClient{
 	}
 	public static function verify($data){
 		if(!isset($data['verify_app_id'])){
-			throw new NoticeException('product_app_id不能为空');
+			throw new NoticeException('verify_app_id不能为空');
 		}
 		if(!isset($data['verify_sign'])){
-			throw new NoticeException('product_sign不能为空');
+			throw new NoticeException('verify_sign不能为空');
 		}
 		if(!isset($data['verify_sign_type'])){
-			throw new NoticeException('product_sign_type不能为空');
+			throw new NoticeException('verify_sign_type不能为空');
 		}
 		
 		$data['interface'] = 'encrypt.verify';
@@ -66,7 +66,7 @@ class CommonModel extends HttpClient{
 		$data['interface'] = 'payType.lists';
 		$data = self::getClient($data);
 		if($data['code']!='success'){
-			throw new SystemException('支付类型为空');
+			throw new NoticeException($data['msg']);
 		}
 		unset($data['code']);
 		unset($data['msg']);
